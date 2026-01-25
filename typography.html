@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typography</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 50px;
+        }
+        h1{
+            text-shadow: 2px 1px blueviolet;
+        }
+        .rotate{
+            margin: 30px;
+            width: 300px; height: 100px;
+            background-color: aliceblue;
+            transition: transform 2s ease;
+        }
+        .rotate:hover{
+            transform: rotate(10deg);
+             background-color: rgb(109, 142, 171);
+        }
+        .skew{
+            margin: 30px;
+            width: 300px; height: 100px;
+            background-color: rgb(159, 230, 188);
+            transition: transform 2s ease;
+        }
+        .skew:hover{
+            transform: skew(10deg);
+             background-color: rgb(7, 136, 76);
+        }
+        .scale{
+            margin: 30px;
+            width: 300px; height: 100px;
+            background-color: rgb(234, 217, 141);
+            transition: transform 2s ease;
+        }
+        .scale:hover{
+            transform: scale(1.5);
+             background-color: rgb(166, 130, 14);
+        }
+    </style>
+</head>
+<body>
+    <h1>Typography</h1>
+<div class="rotate">rotate</div>
+<div class="skew">skew</div>
+<div class="scale">scale</div>
+</body>
+</html>
