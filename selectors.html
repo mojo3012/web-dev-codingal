@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Selectors</title>
+    <style>
+        body {
+            padding: 50px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        h1 {
+            color: palevioletred;
+        }
+
+        h2 {
+            color: palevioletred;
+            background-color: beige;
+        }
+
+        h2:hover {
+            transform: scale(1.1);
+            padding-left: 50px;
+        }
+
+        p::first-letter {
+            color: palevioletred;
+            font-size: large;
+            font-weight: bold;
+        }
+
+        ul li:hover {
+            cursor: pointer;
+            background-color: rgb(215, 215, 153);
+            color: rgb(203, 112, 78);
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Advanced Selectors</h1>
+    <div>
+        <h2>Pseudo classes</h2>
+        <ul>
+            <li>br</li>
+            <li>p</li>
+            <li>u</li>
+            <li>hr</li>
+        </ul>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo tenetur assumenda molestiae voluptatem
+            voluptatum quos officia at dignissimos hic odio!</p>
+    </div>
+    <div>
+        <h2>Psuedo classes</h2>
+        <p>Consequatur numquam nemo blanditiis, a dolore sed! Obcaecati at distinctio, illo quaerat itaque cum optio ad
+            atque sit repellendus? Nihil.</p>
+    </div>
+    <div>
+        <h2>Hovering effects</h2>
+        <p>Corrupti, reiciendis hic ipsum aliquid quod reprehenderit, quaerat adipisci omnis ullam illum accusantium
+            inventore, quos dolorem debitis explicabo veniam doloremque!</p>
+    </div>
+</body>
+
+</html>
