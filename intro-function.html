@@ -11,24 +11,35 @@
 
 <body>
     <h1>Simple calculator using functions</h1>
+    <label for="n1">no.1</label>
+    <input type="number" name="n1" id="n1"><br> <br>
+    <label for="n2">no.2</label>
+    <input type="number" name="n2" id="n2"><br> <br>
     <button type="button" class="btn btn-secondary" onclick="add()">Add</button>
     <button type="button" class="btn btn-primary" onclick="subtract()">Subtract</button>
     <button type="button" class="btn btn-danger" onclick="divide()">Divide</button>
     <button type="button" class="btn btn-success" onclick="multiply()">Multiply</button>
     <p id="output"></p>
     <script>
-        let n1 = 3
-        let n2 = 67
+        
         function add() {
+            const n1=Number(document.getElementById("n1").value)
+            const n2 = Number(document.getElementById("n2").value)
             document.getElementById("output").innerText = n1 + n2
         }
         function subtract() {
+            const n1 = Number(document.getElementById("n1").value)
+            const n2 = Number(document.getElementById("n2").value)
             document.getElementById("output").innerText = n1 - n2
         }
         function divide() {
+            const n1 = Number(document.getElementById("n1").value)
+            const n2 = Number(document.getElementById("n2").value)
             document.getElementById("output").innerText = n1 / n2
         }
         function multiply() {
+            const n1 = Number(document.getElementById("n1").value)
+            const n2 = Number(document.getElementById("n2").value)
             document.getElementById("output").innerText = n1 * n2
         }
     </script>
