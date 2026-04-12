@@ -12,6 +12,7 @@
 <body>
     <h1>Introduction to objects in JS</h1>
     <p id="output"></p>
+    <p id="output2"></p>
     <script>
         let programmer1 = {
             name: "Justin",
@@ -22,8 +23,20 @@
             salary: 400000,
             company: "Google",
             skill: "Web Development"
-           }
-document.getElementById("output").innerText="Hi, my name is "+programmer1.name+". I am "+programmer1.age+" years old"+". I live in "+programmer1.city+". I have "+programmer1.experience_in_years+" years of experience"+". My programming language is "+programmer1.programming_language+". My salary is "+programmer1.salary+". I work in "+programmer1.company+". My skill is "+programmer1.skill+"."
+        }
+        document.getElementById("output").innerText = "Hi, my name is " + programmer1.name + ". I am " + programmer1.age + " years old" + ". I live in " + programmer1.city + ". I have " + programmer1.experience_in_years + " years of experience" + ". My programming language is " + programmer1.programming_language + ". My salary is " + programmer1.salary + ". I work in " + programmer1.company + ". My skill is " + programmer1.skill + "."
+
+        let programmer2 = {
+                name: "Patrick",
+                age: 34,
+                city: "Chicago",
+                experience_in_years: 13,
+                programming_language: "Python",
+                salary: 600000,
+                company: "Microsoft",
+                skill: "Data Science"
+            }
+            document.getElementById("output2").innerText = "Hi, my name is " + programmer2.name + ". I am " + programmer2.age + " years old" + ". I live in " + programmer2.city + ". I have " + programmer2.experience_in_years + " years of experience" + ". My programming language is " + programmer2.programming_language + ". My salary is " + programmer2.salary + ". I work in " + programmer2.company + ". My skill is " + programmer2.skill + "."
     </script>
 
 

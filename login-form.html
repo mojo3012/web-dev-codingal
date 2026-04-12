@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <style>
+        /* A little bit of styling to make it look neat */
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            text-align: center;
+
+            margin-top: 50px;
+
+        }
+
+        .login-container {
+
+            border: 1px solid #ccc;
+
+            padding: 20px;
+
+            width: 300px;
+
+            margin: 0 auto;
+
+            border-radius: 5px;
+
+        }
+
+        input {
+
+            margin: 10px 0;
+
+            padding: 8px;
+
+            width: 90%;
+
+        }
+
+        button {
+
+            padding: 10px 20px;
+
+            cursor: pointer;
+
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="login-container"></div>
+    <h2>Login</h2>
+
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+
+    <button onclick="checklogin()">Login</button>
+
+    <p id="message"></p>
+
+    <script>
+        function checklogin() {
+            //1. Define the correct username and password here
+            const correctUsername = "admin"
+            const correctPassword = "12345"
+
+            //2. Get the values the user typed in
+            const enteredUsername = document.getElementById("username").value
+            const enteredPassword = document.getElementById("password").value
+            const messageDisplay = document.getElementById("message");
+
+            //3. Check if they match
+            if (enteredUsername === correctUsername && enteredPassword === correctPassword) {
+                messageDisplay.style.color = "green";
+                messageDisplay.innerText = "Login succesful! Welcome"
+
+            }
+            else {
+                messageDisplay.style.color = "red";
+                messageDisplay.innerText = "Incorrect username or password."
+
+            }
+
+
+
+
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
