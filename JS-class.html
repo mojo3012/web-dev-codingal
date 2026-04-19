@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro-JS classes</title>
+</head>
+<body>
+  <h2>Intro-JS classes</h2>  
+  <p id="output"></p>
+  <script>
+  class Student{
+    constructor(name,age,city,grade,favorite_subject,hobby,favorite_colour){
+        this.name=name
+        this.age=age
+        this.city=city
+        this.grade=grade
+        this.favorite_subject=favorite_subject
+        this.hobby=hobby
+        this.favorite_colour=favorite_colour
+    }
+  }
+  const s1=new Student("James",12,"London",8,"Maths","Hobby","Emerald Green")
+  document.getElementById("output").innerText=s1.name+" "+s1.age + " " + s1.city + " " + s1.grade + " " + s1.favorite_subject + " " + s1.hobby + " " + s1.favorite_colour
+</script>
+</body>
+</html>
