@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro-Json in JS</title>
+</head>
+
+<body>
+    <h1>Intro-Json in JS</h1>
+    <p id="output1"></p>
+    <p id="output2"></p>
+    <p id="output3"></p>
+    <script>
+        let student = {
+            name: "Jason",
+            age: 13,
+            hobby: "reading",
+            grade: 8,
+            city: "Berlin",
+            fav_sub: "chemistry"
+        }
+        document.getElementById("output1").innerHTML = student.age
+        let student_Json = JSON.stringify(student)
+        document.getElementById("output2").innerHTML = student_Json
+        let student_object=JSON.parse(student_Json)
+        document.getElementById("output3").innerHTML = student_object.fav_sub
+    </script>
+</body>
+
+</html>
