@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Age-Validation using JS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <form id="ageForm" novalidate>
+        <div class="card">
+            <div class="card-body">
+                <h1>Age-Validation using JS</h1>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Enter your Age</span>
+                    <input type="number" class="form-control" placeholder="e.g 18 years" aria-label="age"
+                        aria-describedby="basic-addon1" id="age-input">
+                </div>
+                <button type="submit" class="btn btn-danger">Check validity</button>
+                <h2 id="display"></h2>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        document.getElementById("ageForm").addEventListener("submit", function (e) {
+            e.preventDefault()
+            const age_input = document.getElementById("age-input")
+            const age = age_input.value
+
+            if (age >= 10 && age < 15) {
+                document.getElementById("display").innerText = "Welcome to the Party"
+                document.getElementById("display").style.color = "green"
+            }
+            else {
+                document.getElementById("display").innerText = "Sorry, you're not allowed"
+                document.getElementById("display").style.color = "red"
+            }
+        })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
