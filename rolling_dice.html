@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rolling Dice app using JS</title>
+    <style>
+        #dice {
+            height: 100px;
+            width: 100px;
+        }
+
+        .shake {
+            animation: shake 0.1s infinite;
+        }
+
+        @keyframes shake {
+            0% {
+                transform: translate(2px, 2px) rotate(0deg);
+            }
+
+            25% {
+                transform: translate(-2px, -2px) rotate(-5deg);
+            }
+
+            50% {
+                transform: translate(2px, -2px) rotate(5deg);
+            }
+
+            75% {
+                transform: translate(-2px, 2px) rotate(0deg);
+            }
+
+            100% {
+                transform: translate(2px, 2px) rotate(0deg);
+            }
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body class="d-flex justify-content-center align-items-center vh-100 bg-success-subtle">
+    <div
+        class="container text-center d-flex justify-content-center align-items-center flex-column gap-4 border border-danger rounded-3 p-5 vw-75">
+        <h2 class="mb-4" id="message">Roll the Dice!</h2>
+        <div class="fs-1 bg-danger d-flex justify-content-center align-items-center rounded-3" id="dice">?</div>
+        <button type="button" class="btn btn-danger" onclick="roll()">Roll Dice</button>
+        <h3 id="status"></h3>
+    </div>
+    <script>
+        const dice_array = ["⚀", "⚁", "⚂", "⚃", "⚄", "⚅"]
+        function roll() {
+            const dice_element = document.getElementById("dice")
+            const status = document.getElementById("status")
+            const message = document.getElementById("message")
+            dice_element.classList.add("shake")
+            status.innerText = "Rolling"
+            setTimeout(() => {
+                dice_element.classList.remove("shake")
+                const dice_value = Math.floor(Math.random() * 6)
+                dice_element.innerText = dice_array[dice_value]
+                if (dice_value == 5) {
+                    message.innerText = "lucky"
+                    status.style.color="green"
+                    status.innerText = "jackpot"
+                }
+                else if (dice_value == 0) {
+                    message.innerText = "try again"
+                    status.style.color = "red"
+                    status.innerText = "snake eye"
+                }
+                else{
+                    message.innerText="keep going"
+                    status.style.color = "orange"
+                    status.innerText="you rolled a "+(dice_value+1)
+                }
+            }, 1000)
+        }
+    </script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
